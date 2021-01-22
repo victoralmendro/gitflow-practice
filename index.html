@@ -24,6 +24,20 @@
     </style>
 </head>
 <body>
+    <div class="card" id="randomValueCard">
+        <div class="card-body">
+            <p>124</p>
+            <button onclick="randomize()">
+                Randomize
+            </button>
+        </div>
+    </div>    
     
+    <script>
+        function randomize(){
+            var random = Math.random()*10000;
+            document.querySelector("#randomValueCard p").innerHTML = random.toFixed(0);
+        }
+    </script>
 </body>
 </html>

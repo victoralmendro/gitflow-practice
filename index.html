@@ -21,12 +21,22 @@
             justify-content: center;
             align-items: center;
         }
+
+        .hide{
+            display: none;
+        }
     </style>
 </head>
-<body>
+<body>    
+    <form action="">
+        <input type="checkbox" name="toggleCard" id="toggleCard" checked>
+        <label for="toggleCard">
+            Toggle Card
+        </label>
+    </form>
     <div class="card" id="randomValueCard">
         <div class="card-body">
-            <p>124</p>
+            <p><strong>124</strong></p>
             <button onclick="randomize()">
                 Randomize
             </button>
@@ -34,9 +44,22 @@
     </div>    
     
     <script>
+        document.getElementById("toggleCard").addEventListener("change", (event)=>{
+            toggleCard(event.target.checked);
+        });
+
         function randomize(){
             var random = Math.random()*10000;
             document.querySelector("#randomValueCard p").innerHTML = random.toFixed(0);
+        }
+
+        function toggleCard(show){
+            var elemCard = document.getElementById("randomValueCard");
+            
+            if(show)
+                elemCard.classList.remove("hide");
+            else
+                elemCard.classList.add("hide");
         }
     </script>
 </body>

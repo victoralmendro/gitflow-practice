@@ -25,23 +25,66 @@
         .hide{
             display: none;
         }
+
+        .vertical-line{
+            background: black;
+            flex: 1;
+            max-width: 1px;
+        }
+
+        .card-container{
+            display: flex;
+        }
+
+        .card-container-item{
+            margin: 0 5px;
+        }
+
+        .form-test{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-test label{
+            display: block;
+        }
+
+        .form-test-group{
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>    
-    <form action="">
-        <input type="checkbox" name="toggleCard" id="toggleCard" checked>
-        <label for="toggleCard">
-            Toggle Card
-        </label>
-    </form>
-    <div class="card" id="randomValueCard">
-        <div class="card-body">
-            <p><strong>124</strong></p>
-            <button onclick="randomize()">
-                Randomize
-            </button>
+    <section class="card-container">
+        <div class="card-container-item">
+            <form action="">
+                <input type="checkbox" name="toggleCard" id="toggleCard" checked>
+                <label for="toggleCard">
+                    Toggle Card
+                </label>
+            </form>
+            <div class="card" id="randomValueCard">
+                <div class="card-body">
+                    <p><strong>124</strong></p>
+                    <button onclick="randomize()">
+                        Randomize
+                    </button>
+                </div>
+            </div>    
         </div>
-    </div>    
+        <div class="vertical-line card-container-item" ></div>
+        <form action="" class="form-test card-container-item">
+            <div class="form-test-group">
+                <label for="inputTest">Type Something</label>
+                <input type="text" name="inputTest" id="inputTest">
+            </div>
+            <div class="form-test-group">
+                <label for="inputTest">Not Here</label>
+                <input type="text" name="inputTest" id="inputTest" disabled>
+            </div>      
+        </form>
+    </section>
     
     <script>
         document.getElementById("toggleCard").addEventListener("change", (event)=>{

@@ -1,5 +1,3 @@
-# gitflow-practice
-
 ## === Feature ===
 1. Create a Develop branch;
 2. Create a Feature branch inside the develop branch;

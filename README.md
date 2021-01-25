@@ -1,6 +1,6 @@
 # gitflow-practice
 
-##=== Feature ===
+##Feature
 1. Create a Develop branch;
 2. Create a Feature branch inside the develop branch;
 3. Make modifications and commit your code;

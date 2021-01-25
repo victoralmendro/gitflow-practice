@@ -50,7 +50,13 @@
 
         function randomize(){
             var random = Math.random()*10000;
-            document.querySelector("#randomValueCard p").innerHTML = random.toFixed(0);
+            
+            var cardParagraph = document.querySelector("#randomValueCard p");
+            
+            var boldText = document.createElement("strong");
+            boldText.innerHTML= random.toFixed(0);
+
+            cardParagraph.appendChild(boldText);
         }
 
         function toggleCard(show){

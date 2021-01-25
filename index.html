@@ -94,10 +94,7 @@
         function randomize(){
             var random = Math.random()*10000;
             
-            var cardParagraph = document.querySelector("#randomValueCard p");
-            
-            var boldText = document.createElement("strong");
-            boldText.innerHTML= random.toFixed(0);
+            document.querySelector("#randomValueCard p strong").innerHTML= random.toFixed(0);
 
             cardParagraph.appendChild(boldText);
         }

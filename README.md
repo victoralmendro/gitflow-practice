@@ -7,3 +7,4 @@
 6. Create a Tag for your release
 7. Push your Tag to the origin branch
 8. Checkout to Master branch then merge your Release branch;
+9. Push yout Master branch to Origin branch

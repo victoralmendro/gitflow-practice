@@ -8,3 +8,9 @@
 7. Push your Tag to the origin branch
 8. Checkout to Master branch then merge your Release branch;
 9. Push yout Master branch to Origin branch
+
+## === Hotfix ===
+1. Create a Hotfix branch at Master branch;
+2. Make desired modifications at Hotfix branch;
+3. Commit changes and merge it to the Master branch;
+3. Merge it to the Develop branch too.
